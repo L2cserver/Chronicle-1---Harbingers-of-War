@@ -8,5 +8,6 @@ namespace Auth.Crypt
 {
     class BlowfishEngine
     {
+
     }
 }
