@@ -64,7 +64,19 @@ namespace Auth.ServerPackets
             Stream.WriteByte(0);
         }
 
+        protected internal virtual void WriteB(byte[] Array)
+        {
+            try
+            {
+                Stream.Write(Array, 0, Array.Length);
 
+            }
+            catch(IOException e)
+            {
+                // TODO Auto-generated catch block
+                Console.Write(e.StackTrace);
+            }
+        }
 
         public virtual int GetLength()
         {
